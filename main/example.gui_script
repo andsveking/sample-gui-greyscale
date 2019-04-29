@@ -1,0 +1,8 @@
+function init(self)
+	msg.post("@render:", "clear_color", {color = vmath.vector4(0.3)})
+	for i = 10, 14 do
+		gui.animate(gui.get_node("box" .. i), "position.z", 1, gui.EASING_LINEAR, 4, 0, function() end, gui.PLAYBACK_LOOP_PINGPONG)
+	end
+
+	gui.animate(gui.get_node("root_saturation"), "position.z", 1, gui.EASING_LINEAR, 4, 0, function() end, gui.PLAYBACK_LOOP_PINGPONG)
+end
